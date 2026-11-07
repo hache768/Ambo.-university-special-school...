@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="om">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ambo University Special School</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f3f6fa;
+  color: #172337;
+  transition: 0.3s;
+}
+
+header {
+  background: #073b2b;
+  color: white;
+  padding: 22px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #facc15;
+}
+
+.hero {
+  background: linear-gradient(120deg,#064e3b,#087f5b);
+  color: white;
+  padding: 85px 7%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 35px;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.btn {
+  display: inline-block;
+  background: #facc15;
+  color: #073b2b;
+  padding: 13px 24px;
+  border-radius: 8px;
+  margin-top: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  padding: 55px 7%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #08734e;
+  font-size: 27px;
+}
+
+.about {
+  text-align: center;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 13px;
+  box-shadow: 0 4px 15px #00000012;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card .emoji {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #08734e;
+  margin-bottom: 12px;
+}
+
+.card p {
+  line-height: 1.6;
+}
+
+.card button {
+  background: #08734e;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.features {
+  background: #e4f3eb;
+}
+
+footer {
+  background: #073b2b;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  line-height: 2;
+}
+
+#darkBtn {
+  background: #facc15;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+body.dark {
+  background: #111827;
+  color: white;
+}
+
+body.dark .card {
+  background: #1f2937;
+  color: white;
+}
+
+body.dark .features {
+  background: #172337;
+}
+
+body.dark .section-title,
+body.dark .card h3 {
+  color: #6ee7b7;
+}
+
+@media(max-width:600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    line-height: 2.5;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🎓 AMBO UNIVERSITY</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#labs">Laboratories</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button id="darkBtn" onclick="darkMode()">🌙 Dark</button>
+</header>
+
+<div class="hero" id="home">
+  <h1>Ambo University Special School</h1>
+  <p>Welcome to our Digital STEM Learning Platform</p>
+  <p>Discover Science, Technology, Innovation and Creativity.</p>
+  <a href="#labs" class="btn">Explore Laboratories</a>
+</div>
+
+<section id="about">
+  <h2 class="section-title">About Our School</h2>
+  <div class="about">
+    <p>
+      Ambo University Special School is a center of
+      excellence dedicated to science, technology,
+      innovation and quality education.
+
+      Our platform helps students explore different
+      STEM subjects through digital learning.
+    </p>
+  </div>
+</section>
+
+<section class="features" id="labs">
+  <h2 class="section-title">Our STEM Laboratories</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="emoji">⚡</div>
+      <h3>Physics Laboratory</h3>
+      <p>Explore motion, electricity, energy and physics experiments.</p>
+      <button onclick="explore('Physics Laboratory')">Explore</button>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🧪</div>
+      <h3>Chemistry Laboratory</h3>
+      <p>Discover chemical reactions, elements and laboratory science.</p>
+      <button onclick="explore('Chemistry Laboratory')">Explore</button>
+    </div>
+
+    <div class="card">
+      <div class="emoji">📐</div>
+      <h3>Mathematics</h3>
+      <p>Learn algebra, geometry, statistics and problem solving.</p>
+      <button onclick="explore('Mathematics')">Explore</button>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🧬</div>
+      <h3>Biology Laboratory</h3>
+      <p>Study cells, plants, animals and the human body.</p>
+      <button onclick="explore('Biology Laboratory')">Explore</button>
+    </div>
+
+    <div class="card">
+      <div class="emoji">💻</div>
+      <h3>ICT & Programming</h3>
+      <p>Learn coding, web development and computer technology.</p>
+      <button onclick="explore('ICT & Programming')">Explore</button>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🤖</div>
+      <h3>Innovation & Robotics</h3>
+      <p>Discover robotics, engineering and creative technology.</p>
+      <button onclick="explore('Innovation & Robotics')">Explore</button>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Our Vision</h2>
+  <div class="about">
+    <p>
+      To develop creative, innovative and problem-solving
+      students through science, technology and research.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="about">
+    <p>Ambo University Special School</p>
+    <p>Ambo, Oromia, Ethiopia</p>
+    <p>Education | Science | Technology | Innovation</p>
+  </div>
+</section>
+
+<footer>
+  <h3>Ambo University Special School</h3>
+  <p>Digital STEM Learning Platform</p>
+  <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+function darkMode() {
+  document.body.classList.toggle("dark");
+
+  const btn = document.getElementById("darkBtn");
+
+  if(document.body.classList.contains("dark")) {
+    btn.innerHTML = "☀️ Light";
+  } else {
+    btn.innerHTML = "🌙 Dark";
+  }
+}
+
+function explore(subject) {
+  alert("Welcome to " + subject +
+  "! More learning materials coming soon.");
+}
+</script>
+
+</body>
+</html>
